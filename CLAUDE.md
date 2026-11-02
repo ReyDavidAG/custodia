@@ -72,7 +72,7 @@ Login simulado igual que Chispa (número de 5+ dígitos y "¿Eres tú?"), misma 
   supabase/migrations/        Esquema custodia (requiere Chispa y El Trueque) + bucket de evidencias
   supabase/tests/             Prueba con PGlite: aplica Chispa + El Trueque + Custodia (npm run check)
   docs/database.md            Por qué cada tabla, RLS, integración y paso a SQL Server
-  custodia.client/            Fase 1 (aún no existe)
+  custodia.client/            Fase 1: React 19 + Vite + TS + Tailwind v4 + Supabase (puerto 5176)
   Custodia.Api/ .Application/ .Domain/ .Infrastructure/   Fase 2 (aún no existe)
 ```
 
