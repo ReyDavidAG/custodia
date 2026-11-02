@@ -1,0 +1,11 @@
+{
+  "name": "custodia-schema-check",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node schema_check.mjs ../.."
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.2.17"
+  }
+}

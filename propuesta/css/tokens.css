@@ -1,0 +1,93 @@
+/* Hallmark · macrostructure: Workbench (bitácora de almacén) · tone: utilitarian · anchor hue: 262 (añil)
+ * theme: custom · vibe: "bitácora de almacén, etiqueta de inventario, carta de resguardo"
+ * paper oklch(96.5% 0.006 250) · accent oklch(44% 0.13 262) añil · Barlow Condensed + Figtree + IBM Plex Mono
+ * axes: light / display-condensed / cool · pre-emit critique: P4 H5 E4 S4 R5 V4
+ */
+:root {
+  --color-paper: oklch(96.5% 0.006 250);
+  --color-paper-2: oklch(93.5% 0.008 250);
+  --color-paper-3: oklch(90% 0.01 250);
+  --color-surface: oklch(99.3% 0.003 250);
+  --color-rule: oklch(87% 0.01 250);
+  --color-rule-strong: oklch(76% 0.014 250);
+  --color-muted: oklch(46% 0.02 255);
+  --color-ink: oklch(24% 0.025 258);
+  --color-ink-2: oklch(33% 0.03 258);
+  --color-on-dark: oklch(97% 0.006 250);
+
+  --color-anil: oklch(44% 0.13 262);
+  --color-anil-2: oklch(38% 0.12 262);
+  --color-anil-soft: oklch(94% 0.025 262);
+  --color-tag: oklch(89% 0.07 88);
+  --color-tag-2: oklch(82% 0.09 85);
+  --color-tag-ink: oklch(42% 0.08 70);
+  --color-safety: oklch(86% 0.16 95);
+  --color-focus: oklch(50% 0.17 262);
+
+  --color-ok: oklch(46% 0.11 150);
+  --color-ok-soft: oklch(94% 0.04 150);
+  --color-warn: oklch(50% 0.11 70);
+  --color-warn-soft: oklch(95% 0.05 85);
+  --color-error: oklch(50% 0.17 25);
+  --color-error-soft: oklch(95% 0.03 25);
+  --color-repair: oklch(48% 0.12 300);
+  --color-repair-soft: oklch(95% 0.025 300);
+  --color-cacao: oklch(40% 0.075 42);
+  --color-cacao-soft: oklch(93% 0.03 60);
+  --color-maiz: oklch(85% 0.14 90);
+  --color-maiz-2: oklch(69% 0.12 75);
+
+  --font-display: "Barlow Condensed", "Figtree", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: clamp(1.6rem, 1.3rem + 1.3vw, 2.125rem);
+  --text-3xl: clamp(2.1rem, 1.6rem + 2.4vw, 3rem);
+
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 72px;
+  --gutter: 16px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 0 oklch(80% 0.01 250 / 0.8), 0 10px 22px -18px oklch(30% 0.04 258 / 0.45);
+  --shadow-lift: 0 1px 0 oklch(80% 0.01 250 / 0.8), 0 18px 32px -20px oklch(30% 0.04 258 / 0.55);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 380ms;
+
+  --topbar-h: 60px;
+  --tabbar-h: 64px;
+  --content-max: 1160px;
+
+  --tex-grid: linear-gradient(oklch(88% 0.012 250 / 0.55) 1px, transparent 1px) 0 0 / 100% 28px, linear-gradient(90deg, oklch(88% 0.012 250 / 0.35) 1px, transparent 1px) 0 0 / 28px 100%;
+  --tex-paper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.25 0 0 0 0 0.27 0 0 0 0 0.34 0 0 0 0.28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+[data-status="stock"] { --st: var(--color-ok); --st-soft: var(--color-ok-soft); }
+[data-status="assigned"] { --st: var(--color-anil); --st-soft: var(--color-anil-soft); }
+[data-status="repair"] { --st: var(--color-repair); --st-soft: var(--color-repair-soft); }
+[data-status="retired"] { --st: var(--color-muted); --st-soft: var(--color-paper-2); }
+[data-status="trueque"] { --st: var(--color-cacao); --st-soft: var(--color-cacao-soft); }
+
+@media (min-width: 768px) {
+  :root { --gutter: 28px; }
+}
