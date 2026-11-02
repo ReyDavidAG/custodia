@@ -1,0 +1,17 @@
+{
+	"name": "Custodia",
+	"short_name": "Custodia",
+	"description": "Inventario y préstamo de equipo: quién tiene qué, desde cuándo y con qué evidencia.",
+	"lang": "es-MX",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#f3f5f8",
+	"theme_color": "#f3f5f8",
+	"icons": [
+		{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+		{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+		{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+		{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+	]
+}
