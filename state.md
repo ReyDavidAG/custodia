@@ -5,7 +5,7 @@
 ## Dónde vamos
 
 **Fase 0 · Propuesta visual: lista.** Prototipo completo en `propuesta/`.
-**Fase 1 · Web de demostración: lista (v0.2.0).** Esquema `custodia` y bucket aplicados en Supabase y `custodia.client` probado en Chrome con los tres roles. Falta publicarlo en Vercel.
+**Fase 1 · Web de demostración: lista (v0.2.0).** Esquema `custodia` y bucket aplicados en Supabase y `custodia.client` probado en Chrome con los tres roles. Publicado en https://custodia-psi.vercel.app.
 
 ## Hecho
 
@@ -24,6 +24,12 @@
   - Revisado con `/frontend-review`; prettier, eslint y build en verde.
   - Probado en Chrome de punta a punta: entrega RES-0003 y RES-0004 con firma, devolución con cargador faltante, rechazo y aprobación de solicitudes, baja por IT, confirmación de contabilidad y postulación que aparece en el panel de RH de El Trueque. Sin desbordes de 320 a 768 px; consola limpia.
 
+## Publicación
+
+- Vercel, proyecto `custodia`, raíz `custodia.client`, rama `main`: https://custodia-psi.vercel.app
+- Variables: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` y `VITE_SITE_URL`.
+- Probado en producción: entrar, rutas directas, metadatos para compartir y consola limpia.
+
 ## Decisiones tomadas
 
 - IT primero y extensible por área administradora; hardware y licencias en el mismo inventario.
@@ -34,7 +40,6 @@
 
 ## Pendiente
 
-- Publicar en Vercel (raíz `custodia.client`, variables `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` y `VITE_SITE_URL`).
 - Las cartas de la semilla no tienen archivo en Storage: muestran "La evidencia no está disponible".
 - Sesión entre apps: entrar en otra app del ecosistema cierra la sesión de aquí (una sesión anónima por persona). Se resuelve con Auth0 en fase 2 o con sesiones por persona.
 - "Reportar una falla" es un aviso; falta el flujo de incidencias.
