@@ -1,0 +1,19 @@
+# Not source code: formatting these only creates noise in diffs.
+*.json
+*.md
+*-lock.json
+*.lock
+package-lock.json
+
+# Build output and dependencies
+node_modules/
+dist/
+coverage/
+
+# Static assets
+public/
+src/assets/
+
+# Local environment
+.env
+.env.*
